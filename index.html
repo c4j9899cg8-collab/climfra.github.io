@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Climfra | Climate Infrastructure Pvt. Ltd.</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climfra | Climate Infrastructure Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background-color: #050505;
+            color: #ffffff;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #34d399, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans antialiased">
 
-<header class="hero">
-  <nav class="navbar">
-    <h1 class="logo">CLIMFRA</h1>
-    <ul>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#solutions">Solutions</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="fixed w-full z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-4">
+            <div class="text-2xl font-bold tracking-tighter">CLIM<span class="text-emerald-500">FRA</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#services" class="hover:text-emerald-400 transition">Services</a>
+                <a href="#infrastructure" class="hover:text-emerald-400 transition">Infrastructure</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            </div>
+            <a href="#contact" class="bg-emerald-500 hover:bg-emerald-600 px-5 py-2 rounded-full text-black font-bold transition">Get Started</a>
+        </div>
+    </nav>
 
-  <div class="hero-content">
-    <h2>Climate-Supportive Digital Infrastructure</h2>
-    <p>Building scalable climate infrastructure across digital systems and real-world products.</p>
-    <a href="#contact" class="btn">Work With Us</a>
-  </div>
-</header>
+    <section class="h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                Architecting <span class="gradient-text">Climate</span> Resilience.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Climfra provides the digital presence and physical infrastructure solutions for a sustainable tomorrow. Powered by Climate Infrastructure Solutions PVT. Ltd.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">Explore Projects</button>
+                <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">Our Vision</button>
+            </div>
+        </div>
+    </section>
 
-<section id="mission" class="section">
-  <h2>Our Mission</h2>
-  <p>
-    Climfra – Climate Infrastructure Private Limited is committed to building
-    climate-supportive digital infrastructure and products that help governments,
-    enterprises, and individuals transition toward a sustainable, low-carbon future.
-  </p>
-</section>
+    <section id="services" class="py-24 px-6 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12">Our Core Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-3xl col-span-2">
+                    <i class="fa-solid fa-leaf text-emerald-400 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Digital Carbon Monitoring</h3>
+                    <p class="text-gray-400">Advanced API-driven systems for real-time climate impact tracking and reporting.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <i class="fa-solid fa-server text-blue-400 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Green Infrastructure</h3>
+                    <p class="text-gray-400">Scalable hardware solutions for sustainable urban growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="solutions" class="section dark">
-  <h2>What We Build</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>🌍 Digital Climate Infrastructure</h3>
-      <p>Carbon tracking systems, climate data platforms, ESG intelligence, and AI-driven climate analytics.</p>
-    </div>
-    <div class="card">
-      <h3>⚡ Climate-Positive Products</h3>
-      <p>Low-impact consumer products, climate-linked identity systems, and sustainability tools.</p>
-    </div>
-    <div class="card">
-      <h3>📊 Climate APIs & Platforms</h3>
-      <p>APIs for carbon scoring, climate passports, supply-chain emissions, and policy compliance.</p>
-    </div>
-  </div>
-</section>
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Let's build the <br><span class="text-emerald-400">future together.</span></h2>
+                    <p class="text-gray-400 mb-8">Reach out for collaborations, infrastructure consulting, or digital climate audits.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-emerald-500/10 p-3 rounded-lg"><i class="fa-solid fa-envelope text-emerald-500"></i></div>
+                            <span>habeebmuhammedek@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500/10 p-3 rounded-lg"><i class="fa-solid fa-phone text-blue-500"></i></div>
+                            <span>+91 95625 22144</span>
+                        </div>
+                    </div>
+                </div>
 
-<section id="products" class="section">
-  <h2>Flagship Initiatives</h2>
-  <ul class="list">
-    <li>✔ Carbon ID & Climate Passport Platform</li>
-    <li>✔ Emission-aware Consumer Products</li>
-    <li>✔ Climate-linked Financial Infrastructure</li>
-    <li>✔ ESG & Compliance Automation</li>
-  </ul>
-</section>
+                <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                    <textarea name="message" rows="4" placeholder="How can we help?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
+                    <button type="submit" class="w-full bg-emerald-500 text-black font-bold py-4 rounded-xl hover:bg-emerald-400 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<section id="contact" class="section dark">
-  <h2>Contact Us</h2>
+    <footer class="py-10 text-center text-gray-600 text-sm">
+        &copy; 2026 Climate Infrastructure Solutions PVT. Ltd. All rights reserved.
+    </footer>
 
-  <form id="contactForm">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-    <p id="status"></p>
-  </form>
-</section>
-
-<footer>
-  <p>© 2026 Climfra – Climate Infrastructure Private Limited</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
