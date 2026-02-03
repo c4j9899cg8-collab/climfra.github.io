@@ -2,211 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Climfra — Climate Infrastructure Solutions</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #020617;
-      color: #f9fafb;
-      scroll-behavior: smooth;
-    }
-
-    /* Subtle grid + glow */
-    .grid-bg {
-      background-image:
-        radial-gradient(circle at 1px 1px, rgba(34,197,94,0.08) 1px, transparent 0);
-      background-size: 36px 36px;
-    }
-
-    /* Glass panels */
-    .glass-panel {
-      background: rgba(2, 6, 23, 0.75);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    /* Gradient frame */
-    .gradient-border {
-      background: linear-gradient(135deg, #22c55e, #3b82f6, #22c55e);
-      padding: 1px;
-      border-radius: 2rem;
-    }
-
-    .gradient-content {
-      background: #020617;
-      border-radius: 2rem;
-      height: 100%;
-    }
-
-    /* Floating hero graphic */
-    .animate-float {
-      animation: float 7s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-22px); }
-    }
-
-    /* Ambient glow */
-    .green-glow {
-      box-shadow: 0 0 120px rgba(34,197,94,0.35);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Climfra | Climate Infrastructure Pvt. Ltd.</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
 
-<body class="grid-bg">
-
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 glass-panel px-8 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <div class="w-9 h-9 bg-green-500 rounded-xl flex items-center justify-center">
-        <i data-lucide="leaf" class="w-5 h-5 text-black"></i>
-      </div>
-      <span class="text-xl font-bold uppercase tracking-wide">climfra</span>
-    </div>
-
-    <div class="hidden lg:flex space-x-12 text-xs uppercase tracking-widest text-gray-400">
-      <a href="#about" class="hover:text-green-400 transition">About</a>
-      <a href="#solutions" class="hover:text-green-400 transition">Solutions</a>
-      <a href="#infrastructure" class="hover:text-green-400 transition">Infrastructure</a>
-    </div>
-
-    <a href="mailto:info@climfra.com" class="text-xs px-5 py-2 rounded-full border border-green-500/40 hover:bg-green-500 hover:text-black transition">
-      Contact
-    </a>
+<header class="hero">
+  <nav class="navbar">
+    <h1 class="logo">CLIMFRA</h1>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- HERO -->
-  <section class="min-h-screen flex flex-col lg:flex-row items-center justify-between px-10 pt-28">
+  <div class="hero-content">
+    <h2>Climate-Supportive Digital Infrastructure</h2>
+    <p>Building scalable climate infrastructure across digital systems and real-world products.</p>
+    <a href="#contact" class="btn">Work With Us</a>
+  </div>
+</header>
 
-    <div class="lg:w-1/2 space-y-8">
-      <p class="text-green-400 text-sm tracking-widest uppercase">Climate Infrastructure Solutions</p>
+<section id="mission" class="section">
+  <h2>Our Mission</h2>
+  <p>
+    Climfra – Climate Infrastructure Private Limited is committed to building
+    climate-supportive digital infrastructure and products that help governments,
+    enterprises, and individuals transition toward a sustainable, low-carbon future.
+  </p>
+</section>
 
-      <h1 class="text-6xl lg:text-8xl font-bold leading-none">
-        climfra<span class="text-green-500">.</span>
-      </h1>
-
-      <p class="text-gray-400 text-xl max-w-xl leading-relaxed">
-        We design and operate the digital and physical infrastructure required for a low‑carbon, climate‑positive economy.
-      </p>
-
-      <div class="flex items-center space-x-6 pt-6">
-        <div class="flex -space-x-3">
-          <div class="w-12 h-12 rounded-full bg-emerald-500 border border-black flex items-center justify-center"><i data-lucide="factory"></i></div>
-          <div class="w-12 h-12 rounded-full bg-blue-600 border border-black flex items-center justify-center"><i data-lucide="cpu"></i></div>
-          <div class="w-12 h-12 rounded-full bg-lime-400 border border-black flex items-center justify-center"><i data-lucide="activity"></i></div>
-        </div>
-        <span class="text-xs text-gray-500 uppercase">Digital × Industrial × Climate</span>
-      </div>
+<section id="solutions" class="section dark">
+  <h2>What We Build</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🌍 Digital Climate Infrastructure</h3>
+      <p>Carbon tracking systems, climate data platforms, ESG intelligence, and AI-driven climate analytics.</p>
     </div>
-
-    <div class="lg:w-1/2 flex justify-center mt-20 lg:mt-0 relative">
-      <div class="animate-float relative z-10">
-        <svg width="420" height="420" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="82" stroke="#22c55e" stroke-width="0.5" stroke-dasharray="8 6" />
-          <rect x="58" y="58" width="84" height="84" rx="14" stroke="#3b82f6" stroke-width="2" />
-          <path d="M100 18V38M100 162V182M18 100H38M162 100H182" stroke="#22c55e" stroke-width="2" />
-          <circle cx="100" cy="100" r="12" fill="#22c55e" />
-        </svg>
-      </div>
-      <div class="absolute inset-0 bg-green-500/20 blur-[140px] rounded-full green-glow"></div>
+    <div class="card">
+      <h3>⚡ Climate-Positive Products</h3>
+      <p>Low-impact consumer products, climate-linked identity systems, and sustainability tools.</p>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-32 px-10">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-      <div class="md:col-span-2 glass-panel p-14 rounded-[2.5rem]">
-        <h3 class="text-3xl font-bold mb-6">Mission</h3>
-        <p class="text-gray-400 text-lg leading-relaxed">
-          Climfra builds the invisible backbone of climate action — from climate‑aware software systems to real‑world infrastructure that supports sustainable, environment‑friendly operations at scale.
-        </p>
-      </div>
-
-      <div class="gradient-border">
-        <div class="gradient-content p-10 flex flex-col justify-between">
-          <i data-lucide="globe" class="w-10 h-10 text-green-400"></i>
-          <div>
-            <div class="text-4xl font-bold">100%</div>
-            <p class="text-xs uppercase text-gray-500">Sustainable Traceability</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="glass-panel p-10 rounded-[2.5rem] flex flex-col justify-between">
-        <i data-lucide="server" class="w-10 h-10 text-blue-400"></i>
-        <div>
-          <div class="text-4xl font-bold">24/7</div>
-          <p class="text-xs uppercase text-gray-500">Infrastructure Ops</p>
-        </div>
-      </div>
-
+    <div class="card">
+      <h3>📊 Climate APIs & Platforms</h3>
+      <p>APIs for carbon scoring, climate passports, supply-chain emissions, and policy compliance.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SOLUTIONS -->
-  <section id="infrastructure" class="py-24 px-10 bg-[#030712]">
+<section id="products" class="section">
+  <h2>Flagship Initiatives</h2>
+  <ul class="list">
+    <li>✔ Carbon ID & Climate Passport Platform</li>
+    <li>✔ Emission-aware Consumer Products</li>
+    <li>✔ Climate-linked Financial Infrastructure</li>
+    <li>✔ ESG & Compliance Automation</li>
+  </ul>
+</section>
 
-    <div class="flex flex-col lg:flex-row justify-between items-end mb-20">
-      <h2 class="text-5xl font-bold">Climate Infrastructure</h2>
-      <p class="text-gray-500 max-w-sm">Enterprise‑grade systems for energy‑intensive industries.</p>
-    </div>
+<section id="contact" class="section dark">
+  <h2>Contact Us</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px rounded-3xl overflow-hidden border border-white/10">
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="status"></p>
+  </form>
+</section>
 
-      <div class="bg-black p-16 hover:bg-zinc-900 transition">
-        <span class="text-green-500 block mb-4">01</span>
-        <h4 class="text-2xl font-bold mb-4">Climate Data Platforms</h4>
-        <p class="text-gray-400">APIs and dashboards connecting industrial data, sustainability metrics, and environmental reporting systems.</p>
-      </div>
+<footer>
+  <p>© 2026 Climfra – Climate Infrastructure Private Limited</p>
+</footer>
 
-      <div class="bg-black p-16 hover:bg-zinc-900 transition">
-        <span class="text-green-500 block mb-4">02</span>
-        <h4 class="text-2xl font-bold mb-4">Physical Climate Products</h4>
-        <p class="text-gray-400">Digitally designed infrastructure and products engineered for emissions reduction.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-20 px-10 border-t border-white/5">
-    <div class="flex flex-col md:flex-row justify-between">
-
-      <div class="space-y-6">
-        <div class="text-2xl font-bold uppercase">climfra</div>
-        <p class="text-gray-500 text-sm max-w-xs">Climate Infrastructure Solutions<br/>Built for a sustainable, climate‑positive world.</p>
-      </div>
-
-      <div class="mt-10 md:mt-0">
-        <p class="text-xs uppercase text-gray-500 mb-4">Contact</p>
-        <a href="mailto:info@climfra.com" class="text-2xl hover:text-green-400 transition">info@climfra.com</a>
-      </div>
-
-    </div>
-
-    <div class="mt-20 pt-10 border-t border-white/5 flex justify-between text-[10px] uppercase tracking-widest text-gray-600">
-      <span>© 2026 Climfra</span>
-      <span>Kerala · Global Delivery</span>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
