@@ -15,11 +15,15 @@
         body {
             background-color: #050505;
             color: #ffffff;
+            scroll-behavior: smooth;
         }
         .gradient-text {
             background: linear-gradient(90deg, #34d399, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .hidden-details {
+            display: none;
         }
     </style>
 </head>
@@ -29,6 +33,7 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-4">
             <div class="text-2xl font-bold tracking-tighter">CLIM<span class="text-emerald-500">FRA</span></div>
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#mission" class="hover:text-emerald-400 transition">Mission</a>
                 <a href="#services" class="hover:text-emerald-400 transition">Services</a>
                 <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
             </div>
@@ -42,11 +47,36 @@
                 Architecting <span class="gradient-text">Climate</span> Resilience.
             </h1>
             <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                Climfra provides digital environmental monitoring and strategic climate solutions for a sustainable tomorrow. Powered by Climate Infrastructure Solutions PVT. Ltd.
+                Climfra provides digital environmental monitoring and strategic climate solutions for a sustainable tomorrow.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <button class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">Our Solutions</button>
-                <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">The Mission</button>
+                <a href="#services" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition text-center">Our Solutions</a>
+                <a href="#mission" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition text-center text-white">The Mission</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass p-12 rounded-[3rem] border-emerald-500/20">
+                <h2 class="text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
+                <p class="text-2xl md:text-3xl text-gray-200 leading-relaxed mb-8">
+                    To accelerate the global transition to environmental sustainability by equipping organizations and governments with the digital infrastructure and strategic insight needed to protect our planet.
+                </p>
+                <button onclick="toggleMission()" class="text-emerald-400 font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                    LEARN MORE <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                
+                <div id="mission-details" class="hidden-details mt-10 grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
+                    <div>
+                        <h4 class="text-emerald-500 font-bold mb-2 uppercase tracking-wide">Digital First</h4>
+                        <p class="text-gray-400">We leverage high-frequency data and API-driven monitoring to turn environmental variables into actionable business intelligence.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-blue-500 font-bold mb-2 uppercase tracking-wide">Sustainable Growth</h4>
+                        <p class="text-gray-400">We believe infrastructure should breathe. Our goal is to make ecological health a core metric of institutional success.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -65,16 +95,6 @@
                     <h3 class="text-2xl font-bold mb-2">Governmental Strategic Support</h3>
                     <p class="text-gray-400">Partnering with public sectors to implement climate-focused infrastructure and policy-aligned digital tools.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl col-span-1 md:col-span-3">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                        <div>
-                            <i class="fa-solid fa-microchip text-purple-400 text-3xl mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Ecological Infrastructure Integration</h3>
-                            <p class="text-gray-400">Bridging the gap between digital data and physical sustainability projects.</p>
-                        </div>
-                        <a href="#contact" class="text-emerald-400 font-bold border border-emerald-400/30 px-6 py-3 rounded-full hover:bg-emerald-400/10 transition">Learn More</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -83,8 +103,8 @@
         <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-4xl font-bold mb-6">Let's build the <br><span class="text-emerald-400">future together.</span></h2>
-                    <p class="text-gray-400 mb-8">Reach out for collaborations, government partnerships, or digital environment audits.</p>
+                    <h2 class="text-4xl font-bold mb-6">Let’s build together <br><span class="text-emerald-400">for sustainability.</span></h2>
+                    <p class="text-gray-400 mb-8">Helping organizations allow environmental sustainability through modern digital presence and green infrastructure.</p>
                     
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
@@ -99,9 +119,9 @@
                 </div>
 
                 <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-4">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                    <input type="text" name="name" placeholder="Organization Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
                     <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
-                    <textarea name="message" rows="4" placeholder="How can we help?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
+                    <textarea name="message" rows="4" placeholder="How can we help your organization?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
                     <button type="submit" class="w-full bg-emerald-500 text-black font-bold py-4 rounded-xl hover:bg-emerald-400 transition">Send Message</button>
                 </form>
             </div>
@@ -112,6 +132,16 @@
         &copy; 2026 Climate Infrastructure Solutions PVT. Ltd. All rights reserved.
     </footer>
 
+    <script>
+        function toggleMission() {
+            const details = document.getElementById('mission-details');
+            if (details.style.display === "grid") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "grid";
+            }
+        }
+    </script>
 </body>
 </html>
 
