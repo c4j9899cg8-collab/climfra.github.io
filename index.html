@@ -45,6 +45,21 @@
         .hidden-details {
             display: none;
         }
+        /* Video Background Styling */
+        .video-docker video {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        .video-overlay {
+            background: rgba(0,0,0,0.7);
+            z-index: 0;
+        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -62,12 +77,17 @@
         </div>
     </nav>
 
-    <section class="h-screen flex items-center justify-center text-center px-4">
-        <div class="max-w-4xl">
+    <section class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden video-docker">
+        <video class="absolute object-cover" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-forest-with-data-33984-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay absolute inset-0"></div>
+        
+        <div class="max-w-4xl relative z-10">
             <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
                 Architecting <span class="gradient-text">Climate</span> Resilience.
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
                 Climfra provides digital environmental monitoring and strategic climate solutions for a sustainable tomorrow.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
@@ -144,9 +164,6 @@
                     <p class="text-gray-300 leading-relaxed italic">
                         "To build a world where climate data is as accessible as the weather, empowering every organization to become a guardian of the ecosystem."
                     </p>
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <p class="text-sm text-gray-500">Founded with a commitment to bridge the gap between traditional infrastructure and modern climate demands.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -154,7 +171,7 @@
 
     <section id="contact" class="py-24 px-6">
         <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative">
-            <div class="grid md:grid-cols-2 gap-12">
+            <div id="contact-container" class="grid md:grid-cols-2 gap-12">
                 <div>
                     <h2 class="text-4xl font-bold mb-6">Let’s build together <br><span class="text-emerald-400">for sustainability.</span></h2>
                     <p class="text-gray-400 mb-8">Helping organizations allow environmental sustainability through modern digital presence and green infrastructure.</p>
@@ -171,12 +188,25 @@
                     </div>
                 </div>
 
-                <form action="https://formspree.io/f/maqbgava" method="POST" class="space-y-4">
-                    <input type="text" name="name" placeholder="Organization Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
-                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
-                    <textarea name="message" rows="4" placeholder="How can we help your organization?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
-                    <button type="submit" class="w-full bg-emerald-500 text-black font-bold py-4 rounded-xl hover:bg-emerald-400 transition">Send Message</button>
-                </form>
+                <div id="form-wrapper">
+                    <form id="climfra-contact-form" action="https://formspree.io/f/maqbgava" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Organization Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                        <textarea name="message" rows="4" placeholder="How can we help your organization?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
+                        <button type="submit" id="submit-btn" class="w-full bg-emerald-500 text-black font-bold py-4 rounded-xl hover:bg-emerald-400 transition">Send Message</button>
+                    </form>
+                </div>
+
+                <div id="success-page" class="hidden flex-col items-center justify-center text-center space-y-6 animate-pulse">
+                    <div class="bg-emerald-500/20 p-6 rounded-full">
+                        <i class="fa-solid fa-circle-check text-6xl text-emerald-500"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">Message Received!</h2>
+                    <p class="text-gray-400">Thank you for reaching out to Climfra. Our strategic team will contact you shortly.</p>
+                    <button onclick="resetForm()" class="px-8 py-3 border border-emerald-500 text-emerald-500 rounded-xl hover:bg-emerald-500 hover:text-black transition font-bold">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Go Back
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -188,13 +218,53 @@
     <script>
         function toggleMission() {
             const details = document.getElementById('mission-details');
-            if (details.style.display === "grid") {
-                details.style.display = "none";
-            } else {
-                details.style.display = "grid";
-            }
+            details.style.display = (details.style.display === "grid") ? "none" : "grid";
+        }
+
+        // Handle Form Submission without leaving page
+        const form = document.getElementById("climfra-contact-form");
+        const formWrapper = document.getElementById("form-wrapper");
+        const successPage = document.getElementById("success-page");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById("submit-btn");
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    formWrapper.classList.add('hidden');
+                    successPage.classList.remove('hidden');
+                    successPage.classList.add('flex');
+                    form.reset();
+                } else {
+                    alert("Oops! There was a problem submitting your form");
+                    btn.innerHTML = "Send Message";
+                    btn.disabled = false;
+                }
+            }).catch(error => {
+                alert("Oops! Connection error.");
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        function resetForm() {
+            successPage.classList.add('hidden');
+            successPage.classList.remove('flex');
+            formWrapper.classList.remove('hidden');
+            document.getElementById("submit-btn").innerHTML = "Send Message";
+            document.getElementById("submit-btn").disabled = false;
         }
     </script>
+
     <a href="https://wa.me/919562522144?text=Hello%20Climfra%20Team,%20I%27d%20like%20to%20know%20more%20about%20your%20services." 
        target="_blank" 
        class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all flex items-center justify-center group"
