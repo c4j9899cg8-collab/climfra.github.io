@@ -3,41 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climfra | #1 Climate Infrastructure & Environmental Monitoring India</title>
-    <meta name="description" content="Climfra provides world-class digital environmental monitoring, IoT climate data, and strategic sustainability solutions for governments and organizations in Mumbai, India.">
-    <meta name="keywords" content="Climate Infrastructure, Environmental Monitoring India, Sustainability Solutions Mumbai, Green Tech IoT, Climfra">
-    <link rel="canonical" href="https://climfra.com" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Climfra",
-      "alternateName": "Climate Infrastructure Solutions PVT. Ltd.",
-      "url": "https://climfra.com",
-      "logo": "https://climfra.com/logo.png",
-      "email": "info@climfra.com",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-95625-22144",
-        "contactType": "customer support",
-        "email": "info@climfra.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mumbai",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400001",
-        "addressCountry": "IN"
-      }
-    }
-    </script>
-
+    <title>Climfra | Climate Infrastructure Solutions</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Climfra",
+  "url": "https://climfra.com",
+  "logo": "https://climfra.com/logo.png",
+  "email": "info@climfra.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "info@climfra.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN",
+    "addressLocality": "Mumbai"
+  }
+}
+</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.05);
@@ -48,27 +37,37 @@
             background-color: #050505;
             color: #ffffff;
             scroll-behavior: smooth;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll from animations */
         }
         .gradient-text {
             background: linear-gradient(90deg, #34d399, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hidden-details { display: none; }
+        .hidden-details {
+            display: none;
+        }
         .video-docker video {
-            top: 50%; left: 50%; transform: translate(-50%, -50%);
-            min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
         }
-        .video-overlay { background: rgba(0,0,0,0.7); z-index: 0; }
-        
-        /* Smooth Float Animation for Hero */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .video-overlay {
+            background: rgba(0,0,0,0.7);
+            z-index: 0;
         }
-        .float-anim { animation: float 6s ease-in-out infinite; }
+        /* Pulse for the green dot / accents */
+        @keyframes soft-pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-soft { animation: soft-pulse 4s infinite ease-in-out; }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -92,39 +91,39 @@
         </video>
         <div class="video-overlay absolute inset-0"></div>
         
-        <div class="max-w-4xl relative z-10 float-anim">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="max-w-4xl relative z-10" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
                 Architecting <span class="gradient-text">Climate</span> Resilience.
             </h1>
             <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
                 Climfra provides digital environmental monitoring and strategic climate solutions for a sustainable tomorrow.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
                 <a href="#services" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition text-center">Our Solutions</a>
                 <a href="#mission" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition text-center text-white">The Mission</a>
             </div>
         </div>
     </section>
 
-    <section id="mission" class="py-24 px-6 overflow-hidden">
+    <section id="mission" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="glass p-12 rounded-[3rem] border-emerald-500/20" data-aos="fade-right">
+            <div class="glass p-12 rounded-[3rem] border-emerald-500/20" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
                 <p class="text-2xl md:text-3xl text-gray-200 leading-relaxed mb-8">
-                    To accelerate the global transition to environmental sustainability by equipping organizations and governments with the digital infrastructure.
+                    To accelerate the global transition to environmental sustainability by equipping organizations and governments with the digital infrastructure and strategic insight needed to protect our planet.
                 </p>
                 <button onclick="toggleMission()" class="text-emerald-400 font-bold flex items-center gap-2 hover:gap-4 transition-all">
                     LEARN MORE <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 
                 <div id="mission-details" class="hidden-details mt-10 grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-right">
                         <h4 class="text-emerald-500 font-bold mb-2 uppercase tracking-wide">Digital First</h4>
-                        <p class="text-gray-400">We leverage high-frequency data and API-driven monitoring.</p>
+                        <p class="text-gray-400">We leverage high-frequency data and API-driven monitoring to turn environmental variables into actionable business intelligence.</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
+                    <div data-aos="fade-left">
                         <h4 class="text-blue-500 font-bold mb-2 uppercase tracking-wide">Sustainable Growth</h4>
-                        <p class="text-gray-400">Making ecological health a core metric of success.</p>
+                        <p class="text-gray-400">We believe infrastructure should breathe. Our goal is to make ecological health a core metric of institutional success.</p>
                     </div>
                 </div>
             </div>
@@ -133,17 +132,17 @@
 
     <section id="services" class="py-24 px-6 bg-[#0a0a0a]">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12" data-aos="fade-down">Core Solutions</h2>
+            <h2 class="text-4xl font-bold mb-12" data-aos="fade-right">Core Solutions</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl col-span-1 md:col-span-2" data-aos="flip-up">
+                <div class="glass p-8 rounded-3xl col-span-1 md:col-span-2" data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-solid fa-cloud-sun text-emerald-400 text-3xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Digital Environment Monitoring</h3>
-                    <p class="text-gray-400">Advanced systems for real-time tracking of environmental shifts.</p>
+                    <p class="text-gray-400">Advanced systems for real-time tracking of environmental shifts and ecological impact reporting.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl" data-aos="flip-up" data-aos-delay="200">
+                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-solid fa-building-columns text-blue-400 text-3xl mb-4"></i>
-                    <h3 class="text-2xl font-bold mb-2">Governmental Support</h3>
-                    <p class="text-gray-400">Climate-focused infrastructure and policy tools.</p>
+                    <h3 class="text-2xl font-bold mb-2">Governmental Strategic Support</h3>
+                    <p class="text-gray-400">Partnering with public sectors to implement climate-focused infrastructure and policy-aligned digital tools.</p>
                 </div>
             </div>
         </div>
@@ -155,68 +154,146 @@
                 <div data-aos="fade-right">
                     <h2 class="text-4xl font-bold mb-6 italic">Who We Are</h2>
                     <p class="text-gray-400 text-lg mb-6">
-                        Climfra sits at the intersection of environmental science and digital innovation in Mumbai.
+                        Climfra (Climate Infrastructure Solutions PVT. Ltd.) is a forward-thinking technology firm headquartered in Mumbai, India. We sit at the intersection of environmental science and digital innovation.
                     </p>
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="border-l-2 border-emerald-500 pl-4" data-aos="fade-up">
+                        <div class="border-l-2 border-emerald-500 pl-4">
                             <h4 class="font-bold text-white">Innovation</h4>
                             <p class="text-sm text-gray-500">Pioneering green tech and IoT integration.</p>
                         </div>
-                        <div class="border-l-2 border-blue-500 pl-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="border-l-2 border-blue-500 pl-4">
                             <h4 class="font-bold text-white">Integrity</h4>
-                            <p class="text-sm text-gray-500">Data-driven transparency.</p>
+                            <p class="text-sm text-gray-500">Data-driven transparency in all reports.</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-[2rem] border-white/5" data-aos="zoom-in">
+                <div class="glass p-8 rounded-[2rem] border-white/5" data-aos="flip-left" data-aos-duration="1000">
                     <h3 class="text-xl font-bold mb-4 text-emerald-400">Our Vision</h3>
-                    <p class="text-gray-300 leading-relaxed italic mb-4">"Building a world where climate data is accessible." - JAMSHEELA</p>
-                    <p class="text-gray-300 leading-relaxed italic">"Practical steps towards real action." - JUMAILA</p>
+                    <p class="text-gray-300 leading-relaxed italic mb-4">
+                        "To build a world where climate data is as accessible as the weather, empowering every organization to become a guardian of the ecosystem." -JAMSHEELA | COFOUNDER
+                    </p>
+                     <p class="text-gray-300 leading-relaxed italic">
+                        "To help Organaizations take simple,practical steps towards sustainability and real climate action." -JUMAILA | COFOUNDER
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 px-6">
-        <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative" data-aos="fade-up">
+        <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative" data-aos="zoom-in-up">
             <div id="contact-container" class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Let’s build <br><span class="text-emerald-400">sustainability.</span></h2>
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-4xl font-bold mb-6">Let’s build together <br><span class="text-emerald-400">for sustainability.</span></h2>
+                    <p class="text-gray-400 mb-8">Helping organizations allow environmental sustainability through modern digital presence and green infrastructure.</p>
+                    
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
                             <div class="bg-emerald-500/10 p-3 rounded-lg"><i class="fa-solid fa-envelope text-emerald-500"></i></div>
                             <span>info@climfra.com</span>
                         </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500/10 p-3 rounded-lg"><i class="fa-solid fa-phone text-blue-500"></i></div>
+                            <span>+91 95625 22144</span>
+                        </div>
                     </div>
                 </div>
-                <div id="form-wrapper">
+
+                <div id="form-wrapper" data-aos="fade-left" data-aos-delay="400">
                     <form id="climfra-contact-form" action="https://formspree.io/f/xkovrvee" method="POST" class="space-y-4">
-                        <input type="text" name="name" placeholder="Organization" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-emerald-500 outline-none">
+                        <input type="text" name="name" placeholder="Organization Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
+                        <textarea name="message" rows="4" placeholder="How can we help your organization?" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition"></textarea>
                         <button type="submit" id="submit-btn" class="w-full bg-emerald-500 text-black font-bold py-4 rounded-xl hover:bg-emerald-400 transition">Send Message</button>
                     </form>
+                </div>
+
+                <div id="success-page" class="hidden flex-col items-center justify-center text-center space-y-6 animate-pulse">
+                    <div class="bg-emerald-500/20 p-6 rounded-full">
+                        <i class="fa-solid fa-circle-check text-6xl text-emerald-500"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">Message Received!</h2>
+                    <p class="text-gray-400">Thank you for reaching out to Climfra. Our team will contact you shortly.</p>
+                    <button onclick="resetForm()" class="px-8 py-3 border border-emerald-500 text-emerald-500 rounded-xl hover:bg-emerald-500 hover:text-black transition font-bold">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> Go Back
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="py-10 text-center text-gray-600 text-sm">
-        &copy; 2026 Climate Infrastructure Solutions PVT. Ltd.
+        &copy; 2026 Climate Infrastructure Solutions PVT. Ltd. All rights reserved.
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 800,
-            once: false,
-            mirror: true
+            once: true,
+            offset: 100,
+            easing: 'ease-out-quad'
         });
 
         function toggleMission() {
             const details = document.getElementById('mission-details');
             details.style.display = (details.style.display === "grid") ? "none" : "grid";
-            // Refresh AOS to catch newly visible elements
-            setTimeout(() => { AOS.refresh(); }, 100);
+            // Refresh AOS to detect newly shown elements
+            setTimeout(() => { AOS.refresh(); }, 10);
+        }
+
+        const form = document.getElementById("climfra-contact-form");
+        const formWrapper = document.getElementById("form-wrapper");
+        const successPage = document.getElementById("success-page");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById("submit-btn");
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    formWrapper.classList.add('hidden');
+                    successPage.classList.remove('hidden');
+                    successPage.classList.add('flex');
+                    form.reset();
+                } else {
+                    alert("Oops! There was a problem submitting your form");
+                    btn.innerHTML = "Send Message";
+                    btn.disabled = false;
+                }
+            }).catch(error => {
+                alert("Oops! Connection error.");
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        function resetForm() {
+            successPage.classList.add('hidden');
+            successPage.classList.remove('flex');
+            formWrapper.classList.remove('hidden');
+            document.getElementById("submit-btn").innerHTML = "Send Message";
+            document.getElementById("submit-btn").disabled = false;
         }
     </script>
+
+    <a href="https://wa.me/919562522144?text=Hello%20Climfra%20Team,%20I%27d%20like%20to%20know%20more%20about%20your%20services." 
+       target="_blank" 
+       class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all flex items-center justify-center group"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-bold whitespace-nowrap">
+            Chat with us
+        </span>
+    </a>
 </body>
 </html>
