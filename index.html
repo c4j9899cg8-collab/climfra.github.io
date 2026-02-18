@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climfra | Climate Infrastructure Solutions</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +36,6 @@
             background-color: #050505;
             color: #ffffff;
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
         .gradient-text {
             background: linear-gradient(90deg, #34d399, #3b82f6);
@@ -47,6 +45,7 @@
         .hidden-details {
             display: none;
         }
+        /* Video Background Styling */
         .video-docker video {
             top: 50%;
             left: 50%;
@@ -65,7 +64,7 @@
 </head>
 <body class="font-sans antialiased">
 
-    <nav class="fixed w-full z-50 p-6" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="fixed w-full z-50 p-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-8 py-4">
             <div class="text-2xl font-bold tracking-tighter">CLIM<span class="text-emerald-500">FRA</span></div>
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
@@ -84,14 +83,14 @@
         </video>
         <div class="video-overlay absolute inset-0"></div>
         
-        <div class="max-w-4xl relative z-10" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="max-w-4xl relative z-10">
             <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
                 Architecting <span class="gradient-text">Climate</span> Resilience.
             </h1>
-            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
                 Climfra provides digital environmental monitoring and strategic climate solutions for a sustainable tomorrow.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#services" class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition text-center">Our Solutions</a>
                 <a href="#mission" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition text-center text-white">The Mission</a>
             </div>
@@ -100,7 +99,7 @@
 
     <section id="mission" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="glass p-12 rounded-[3rem] border-emerald-500/20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="glass p-12 rounded-[3rem] border-emerald-500/20">
                 <h2 class="text-4xl font-bold mb-6 gradient-text">Our Mission</h2>
                 <p class="text-2xl md:text-3xl text-gray-200 leading-relaxed mb-8">
                     To accelerate the global transition to environmental sustainability by equipping organizations and governments with the digital infrastructure and strategic insight needed to protect our planet.
@@ -110,11 +109,11 @@
                 </button>
                 
                 <div id="mission-details" class="hidden-details mt-10 grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
-                    <div data-aos="fade-right">
+                    <div>
                         <h4 class="text-emerald-500 font-bold mb-2 uppercase tracking-wide">Digital First</h4>
                         <p class="text-gray-400">We leverage high-frequency data and API-driven monitoring to turn environmental variables into actionable business intelligence.</p>
                     </div>
-                    <div data-aos="fade-left">
+                    <div>
                         <h4 class="text-blue-500 font-bold mb-2 uppercase tracking-wide">Sustainable Growth</h4>
                         <p class="text-gray-400">We believe infrastructure should breathe. Our goal is to make ecological health a core metric of institutional success.</p>
                     </div>
@@ -125,14 +124,14 @@
 
     <section id="services" class="py-24 px-6 bg-[#0a0a0a]">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12" data-aos="fade-right">Core Solutions</h2>
+            <h2 class="text-4xl font-bold mb-12">Core Solutions</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl col-span-1 md:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass p-8 rounded-3xl col-span-1 md:col-span-2">
                     <i class="fa-solid fa-cloud-sun text-emerald-400 text-3xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Digital Environment Monitoring</h3>
                     <p class="text-gray-400">Advanced systems for real-time tracking of environmental shifts and ecological impact reporting.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass p-8 rounded-3xl">
                     <i class="fa-solid fa-building-columns text-blue-400 text-3xl mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Governmental Strategic Support</h3>
                     <p class="text-gray-400">Partnering with public sectors to implement climate-focused infrastructure and policy-aligned digital tools.</p>
@@ -144,7 +143,7 @@
     <section id="about" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
+                <div>
                     <h2 class="text-4xl font-bold mb-6 italic">Who We Are</h2>
                     <p class="text-gray-400 text-lg mb-6">
                         Climfra (Climate Infrastructure Solutions PVT. Ltd.) is a forward-thinking technology firm headquartered in Mumbai, India. We sit at the intersection of environmental science and digital innovation.
@@ -160,9 +159,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-[2rem] border-white/5" data-aos="flip-left" data-aos-duration="1000">
+                <div class="glass p-8 rounded-[2rem] border-white/5">
                     <h3 class="text-xl font-bold mb-4 text-emerald-400">Our Vision</h3>
-                    <p class="text-gray-300 leading-relaxed italic mb-4">
+                    <p class="text-gray-300 leading-relaxed italic">
                         "To build a world where climate data is as accessible as the weather, empowering every organization to become a guardian of the ecosystem." -JAMSHEELA | COFOUNDER
                     </p>
                      <p class="text-gray-300 leading-relaxed italic">
@@ -174,9 +173,9 @@
     </section>
 
     <section id="contact" class="py-24 px-6">
-        <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative" data-aos="zoom-in-up" data-aos-duration="1000">
+        <div class="max-w-5xl mx-auto glass rounded-[3rem] p-12 overflow-hidden relative">
             <div id="contact-container" class="grid md:grid-cols-2 gap-12">
-                <div data-aos="fade-right" data-aos-delay="300">
+                <div>
                     <h2 class="text-4xl font-bold mb-6">Let’s build together <br><span class="text-emerald-400">for sustainability.</span></h2>
                     <p class="text-gray-400 mb-8">Helping organizations allow environmental sustainability through modern digital presence and green infrastructure.</p>
                     
@@ -192,7 +191,7 @@
                     </div>
                 </div>
 
-                <div id="form-wrapper" data-aos="fade-left" data-aos-delay="500">
+                <div id="form-wrapper">
                     <form id="climfra-contact-form" action="https://formspree.io/f/xkovrvee" method="POST" class="space-y-4">
                         <input type="text" name="name" placeholder="Organization Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
                         <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-emerald-500 transition">
@@ -201,8 +200,8 @@
                     </form>
                 </div>
 
-                <div id="success-page" class="hidden flex-col items-center justify-center text-center space-y-6">
-                    <div class="bg-emerald-500/20 p-6 rounded-full animate-bounce">
+                <div id="success-page" class="hidden flex-col items-center justify-center text-center space-y-6 animate-pulse">
+                    <div class="bg-emerald-500/20 p-6 rounded-full">
                         <i class="fa-solid fa-circle-check text-6xl text-emerald-500"></i>
                     </div>
                     <h2 class="text-3xl font-bold">Message Received!</h2>
@@ -219,21 +218,13 @@
         &copy; 2026 Climate Infrastructure Solutions PVT. Ltd. All rights reserved.
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-quad'
-        });
-
         function toggleMission() {
             const details = document.getElementById('mission-details');
             details.style.display = (details.style.display === "grid") ? "none" : "grid";
-            setTimeout(() => { AOS.refresh(); }, 50);
         }
 
+        // Handle Form Submission without leaving page
         const form = document.getElementById("climfra-contact-form");
         const formWrapper = document.getElementById("form-wrapper");
         const successPage = document.getElementById("success-page");
@@ -256,11 +247,11 @@
                     successPage.classList.add('flex');
                     form.reset();
                 } else {
-                    alert("Oops! There was a problem");
+                    alert("Oops! There was a problem submitting your form");
                     btn.innerHTML = "Send Message";
                     btn.disabled = false;
                 }
-            }).catch(() => {
+            }).catch(error => {
                 alert("Oops! Connection error.");
                 btn.innerHTML = "Send Message";
                 btn.disabled = false;
@@ -277,9 +268,10 @@
         }
     </script>
 
-    <a href="https://wa.me/919562522144?text=Hello%20Climfra%20Team" 
+    <a href="https://wa.me/919562522144?text=Hello%20Climfra%20Team,%20I%27d%20like%20to%20know%20more%20about%20your%20services." 
        target="_blank" 
-       class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all flex items-center justify-center group">
+       class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all flex items-center justify-center group"
+       aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
         <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 font-bold whitespace-nowrap">
             Chat with us
